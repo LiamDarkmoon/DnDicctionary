@@ -1,0 +1,104 @@
+$MainColor: #db131c
+$MainShadow: #aa030a
+$secondaryColor: #b8b3b4
+$secondaryShadow: #808080
+
+@mixin flex()
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+    
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    font-size: 16px
+    font-family: 'Stoke', serif
+
+a:-webkit-any-link
+    text-decoration: none
+    color: black
+
+.header__nav
+    background-color: $MainShadow
+
+.navbar__nav
+    @include flex
+
+    align-items: center
+    justify-content: space-between
+    padding: 5px 16px
+
+    .search__box
+        height: 40px
+        line-height: 40px
+        width: 33.33%
+        border-radius: 10px
+        font-size: 20px
+        padding-left: 16px
+    
+.bottom__nav
+    @include flex()
+
+    width: 100%
+    position: relative
+    justify-content: center
+    background-color: $MainColor
+
+    ul
+        list-style: none
+        margin: 0
+        padding: 0 20px
+        height: 40px
+        justify-content: space-evenly
+
+        li
+            display: inline-block
+
+            a, .dropdown__btn
+                display: block
+                color: black
+                text-align: center
+                padding: 0px 16px
+                float: left
+                height: 40px
+                line-height: 40px
+                
+        li
+            a:hover, .dropdown:hover
+                .dropdown__btn
+                    background-color: $MainShadow
+
+        
+        .dropdown
+            display: inline-block   
+
+    .dropdown__menu
+        display: none
+        position: absolute
+        top: 40px
+        left: 0
+        background-color: $MainColor
+        width: 100%
+        z-index: 1
+        text-align: center
+
+        a
+            color: black
+
+
+    .dropdown__menu
+        a:hover
+            background-color: $MainShadow
+            color: $secondaryColor
+
+    .dropdown:hover .dropdown__menu
+        display: block
+
+    .dropdown:hover .dropdown__btn
+        background-color: $MainShadow
+        color: $secondaryColor
+

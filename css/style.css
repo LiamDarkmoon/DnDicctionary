@@ -1,0 +1,298 @@
+:root {
+  --main-color: #ff0133;
+  --main-shadow: #921233;
+  --secondary-color: #636363;
+  --background-color: #a8a8a8;
+  --type-color: #fff;
+}
+
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--type-color);
+  font-size: 16px;
+  background: var(--background-color);
+  font-family: "Syne", sans-serif;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+a,
+li {
+  text-decoration: none;
+  color: var(--type-color);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--type-color);
+}
+/**HEADER**/
+#header-nav {
+  background: var(--main-color);
+}
+
+#nav-list a {
+  color: var(--type-color);
+  font-size: 1.25em;
+}
+
+.navbar-secondary {
+  top: 65px;
+  background: var(--main-color);
+}
+
+.dropdown {
+  background: var(--main-color);
+  justify-content: center;
+}
+
+.dropdown-button {
+  display: flex;
+  background: var(--main-color);
+  color: var(--type-color);
+  padding: 16px;
+  border: none;
+  justify-content: center;
+}
+
+.dropdown-menu {
+  list-style: none;
+  border: none;
+  background: var(--main-color);
+  color: var(--type-color);
+  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.dropdown-menu > a {
+  color: var(--type-color);
+  justify-content: center;
+  width: max-content;
+}
+
+.dropdown-menu a:hover {
+  background: var(--background-color);
+  color: var(--main-color);  
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.search-container {
+  width: max-content;
+  display: grid;
+  place-items: center;
+  margin: auto;
+}
+
+.search-box {
+  width: 300px;
+  height: 50px;
+  background: var(--background-color);
+  line-height: 30px;
+  padding: 10px;
+  cursor: pointer;
+  
+}
+.search-input {
+  background: var(--background-color);
+  color: var(--type-color);
+  outline: none;
+  border: none;
+  line-height: 30px;
+  width: 0px;
+  float: left;
+  font-size: 1em;
+}
+.search-btn {
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  background: var(--background-color);
+  padding: 10px;
+  border-radius: 50%;
+  float: right;
+  color: var(--secondary-color);
+  transition: 0.4s ease;
+}
+
+/**QUERYS**/
+@media (max-width: 576px) {
+  #phone {
+    margin-bottom: 8px;
+  }
+  .foot-title, .foot-text {
+    text-align: center;
+  }
+  #redes {
+    justify-content: center;
+  }
+  #Account{
+    margin-top: 8px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  #phone {
+    margin-bottom: 8px; 
+  }
+  #redes {
+    justify-content: center;
+  }
+  .foot-text {
+    text-align:center;
+  }
+  .foot-title {
+    text-align: center;
+  }
+  #Account{
+    margin-top: 8px;
+  }
+}
+
+/**CONTENT**/
+#main-container {
+  margin-top: 66px;
+}
+
+/**LOGIN**/
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 15%);
+  width: 29vw;
+  background: ;
+  border-radius: 10px;
+}
+
+.center h1 {
+  color: ;
+  text-align: center;
+  padding:0 0 20px 0;
+  border-bottom: 1px solid ;
+}
+
+.center form {
+  padding:0 40px;
+  box-sizing: border-box;
+}
+
+form .txt__field {
+  position: relative;
+  border-bottom: 2px solid black;
+  margin: 30px 0;
+
+}
+
+.txt__field input {
+  width: 100%;
+  padding:0 5px;
+  height: 40px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.txt__field label {
+  position: absolute;
+  top: 50%;
+  left:5px;
+  color: ;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.txt__field span::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0px;
+  height: 2px;
+  background: ;
+  transition: .5s;
+}
+
+.txt__field input:focus ~ label,
+.txt__field input:valid ~ label {
+  top: -5px;
+  color: ;
+}
+
+.txt__field input:focus ~ span::before,
+.txt__field input:valid ~ span::before {
+  width: 100%;
+}
+
+.pass {
+  margin: -5px 0 20px 5px;
+  color: black;
+  cursor: pointer;
+}
+
+.pass:hover {
+  text-decoration: underline;
+}
+
+input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: ;
+  color: ;
+  transition: .5s;
+}
+
+.signup__link {
+  margin: 30px 0;
+  text-align: center;
+  color: black;
+}
+
+.signup__link a {
+  color: ;
+  text-decoration: none;
+}
+
+.signup__link a:hover {
+  text-decoration: underline;
+}
+
+/**FOOTER**/
+footer {
+  background: ;  
+}
+.foot-title {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: ;
+}
+
+.foot-text {
+	align-self: start;
+  font-size: 1em;
+	font-weight: 100;
+  color: ;
+}
+
+.foot-title a,
+.foot-text a {
+  text-decoration: none;
+  color: ;
+}
